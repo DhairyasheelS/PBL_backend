@@ -44,3 +44,6 @@ async def predict_tumor(file: UploadFile = File(...)):
     return {"predicted_class": predicted_label}
 
 # Run with: uvicorn main:app --reload
+@app.get("/")
+def home():
+    return {"message": "Backend is running!"}
